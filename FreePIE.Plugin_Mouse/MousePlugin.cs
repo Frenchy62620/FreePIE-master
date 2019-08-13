@@ -214,8 +214,8 @@ namespace FreePIE.Plugin_Mouse
         public void PressAndRelease(int button) => setPressedStrategy.Add(button);
         public bool IsSingleClicked(int button) => getPressedStrategy.IsSingleClicked(button);
         public bool IsDoubleClicked(int button) => getPressedStrategy.IsDoubleClicked(button);
-        public int HeldDown(int button, int nbvalue, int duration) => getPressedStrategy.HelDowned(button, IsDown(button), nbvalue, duration);
-        public void HeldDownStop(int button) => getPressedStrategy.HelDownStop(button);
+        public int HeldDown(int button, int nbvalue, int duration) => getPressedStrategy.HeldDown(button, IsDown(button), nbvalue, duration);
+        public void HeldDownStop(int button) => getPressedStrategy.HeldDownStop(button);
         public bool SetEnhancePointerPrecision(int state = -1)
         {
             int[] mouseParams = new int[3];//necessary for enhancePointer

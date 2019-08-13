@@ -282,8 +282,8 @@ namespace FreePIE.Plugin_Keyboard
         public bool IsSingleClicked(int keycode) => getPressedStrategy.IsSingleClicked(keycode);
         public bool IsDoubleClicked(int keycode) => getPressedStrategy.IsDoubleClicked(keycode);
 
-        public int HeldDown(int keycode, int nbvalue, int lapse) => getPressedStrategy.HelDowned(keycode, IsDown(keycode), nbvalue, lapse);
-        public void HeldDownStop(int keycode) => getPressedStrategy.HelDownStop(keycode);
+        public int HeldDown(int keycode, int nbvalue, int lapse) => getPressedStrategy.HeldDown(keycode, IsDown(keycode), nbvalue, lapse);
+        public void HeldDownStop(int keycode) => getPressedStrategy.HeldDownStop(keycode);
 
         public bool IsDown(int keycode, bool value = false)
         {

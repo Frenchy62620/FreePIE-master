@@ -373,24 +373,24 @@ namespace FreePIE.CommonTools
             return results.ToArray();
         }
 
-        //public static bool ExtractAttribute(string v, out string[] attrib)
-        //{
-        //    //var a = typeof(v) == typeof(string); 
-        //    foreach (var a in cmdes[0])
-        //    {
-        //        if (a.Contains(v))
-        //        {
-        //            if (v.Equals("say:"))
-        //                attrib = (a.Substring(v.Length)).Split('!');
-        //            else
-        //                attrib = (a.Substring(v.Length)).Split(',');
+        public static bool ExtractAttribute(string v, out string[] attrib)
+        {
+            //var a = typeof(v) == typeof(string); 
+            foreach (var a in cmdes[0])
+            {
+                if (a.Contains(v))
+                {
+                    if (v.Equals("say:"))
+                        attrib = (a.Substring(v.Length)).Split('!');
+                    else
+                        attrib = (a.Substring(v.Length)).Split(',');
 
-        //            return true;
-        //        }
-        //    }
-        //    attrib = null;
-        //    return false;
-        //}
+                    return true;
+                }
+            }
+            attrib = null;
+            return false;
+        }
         public static bool Compare<T>(T buforadr, string op, T val1, T val2) where T : IComparable
         {
             // ope:@C,string

@@ -185,7 +185,7 @@ namespace FreePIE.Plugin_Keyboard.ScriptAuto
                     sb.Append(cmdes[0][index]);
                     sb.Append("!K +wkp!K +up +rev "); sb.Append(cmdes[0][index]);
                     sb.Append("!K +down "); sb.Append(cmdes[0][index]);
-                    sb.ToString().DecodelineOfCommand(section: null, priority: 1);
+                    //sb.ToString().DecodelineOfCommand(section: null, priority: 1);
                     return;
                 }
 
