@@ -10,7 +10,7 @@ namespace FreePIE.CommonStrategy
     public class GetPressedStrategy<T>
     {
         private readonly Func<T, bool, bool> isDown;
-        private readonly Dictionary<T, State> dico;// [ T ,[bool pressed, bool released] ] 
+        private readonly Dictionary<T, State> dico;// [ T ,[bool pressed, bool released] ]
         public GetPressedStrategy(Func<T, bool, bool> isDown)
         {
             this.isDown = isDown;
