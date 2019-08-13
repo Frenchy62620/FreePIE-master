@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65D8F959-C4AD-4EC9-9EFA-9EBB9D8CA7CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreePIE.Core.Plugins</RootNamespace>
+    <AssemblyName>FreePIE.Core.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputTKZ>..\..\..\FreePIE_Debug\plugins\</OutputTKZ>
+    <OutputPath>..\FreePIE.GUI\bin\Debug\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputTKZ>..\..\..\FreePIE\plugins\</OutputTKZ>
+    <OutputPath>..\FreePIE.GUI\bin\Release\plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a646454c8d475470, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoItX.Dotnet.3.3.14.5\lib\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DirectInput.4.2.0\lib\net45\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.XInput.4.2.0\lib\net45\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="vJoyInterfaceWrap, Version=0.2.1.6, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Téléchargement\FreePIE-master\FreePIE-master\Lib\VJoy\vJoyInterfaceWrap.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="BeepPlugin.cs" />
+    <Compile Include="ComDevicePlugin.cs" />
+    <Compile Include="FreePieIOPlugin.cs" />
+    <Compile Include="Globals\GlobalIndexer.cs" />
+    <Compile Include="JoystickPlugin.cs" />
+    <Compile Include="ScriptAuto\Speech_Script.cs" />
+    <Compile Include="ScriptAuto\Joystick_Script.cs" />
+    <Compile Include="SpeechPlugin.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FreePIE.CommonStrategy\FreePIE.CommonStrategy.csproj">
+      <Project>{C4807010-3D67-4085-9BDF-85D0DF5B2AE6}</Project>
+      <Name>FreePIE.CommonStrategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreePie.CommonTools\FreePIE.CommonTools.csproj">
+      <Project>{0bdc0ea1-679f-4c01-a812-fba67c9e45e0}</Project>
+      <Name>FreePIE.CommonTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreePIE.Core.Contracts\FreePIE.Core.Contracts.csproj">
+      <Project>{58285BD6-810D-4BBD-8249-230C3B0AC76F}</Project>
+      <Name>FreePIE.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreePIE.Core\FreePIE.Core.csproj">
+      <Project>{BCF7160F-9CB9-46E5-91CA-EE15E1D5ED54}</Project>
+      <Name>FreePIE.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Help\FreePIE.Core.Plugins.HydraPlugin.rtf" />
+    <None Include="Help\FreePIE.Core.Plugins.AndroidPlugin.rtf" />
+    <None Include="Help\FreePIE.Core.Plugins.PPJoyPlugin.rtf" />
+    <None Include="Help\FreePIE.Core.Plugins.FreeImuPlugin.rtf" />
+    <None Include="Help\FreePIE.Core.Plugins.AhrsImuPlugin.rtf" />
+    <None Include="Help\FreePIE.Core.Plugins.VJoyPlugin.rtf" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo ================= $(ConfigurationName) ===============
+if $(ConfigurationName) == Debug (
+ echo copy "$(TargetPath)" "$(SolutionDir)..\..\FreePIE_Debug\plugins\$(TargetFileName)"
+ copy "$(TargetPath)" "$(SolutionDir)..\..\FreePIE_Debug\plugins\$(TargetFileName)" /Y
+) ELSE (
+ echo copy "$(TargetPath)" "$(SolutionDir)..\..\FreePIE\plugins\$(TargetFileName)"
+ copy "$(TargetPath)" "$(SolutionDir)..\..\FreePIE\plugins\$(TargetFileName)" /Y
+)
+echo ================= $(ConfigurationName) ===============</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets" Condition="Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
