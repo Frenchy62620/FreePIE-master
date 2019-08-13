@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{40AC54
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreePIE.CommonTools", "FreePIE.CommonTools\FreePIE.CommonTools.csproj", "{0BDC0EA1-679F-4C01-A812-FBA67C9E45E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreePIE.CommonTools", "FreePie.CommonTools\FreePIE.CommonTools.csproj", "{0BDC0EA1-679F-4C01-A812-FBA67C9E45E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreePIE.CommonStrategy", "FreePIE.CommonStrategy\FreePIE.CommonStrategy.csproj", "{C4807010-3D67-4085-9BDF-85D0DF5B2AE6}"
 EndProject
